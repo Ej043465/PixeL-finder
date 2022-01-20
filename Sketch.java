@@ -16,9 +16,11 @@ public class Sketch extends PApplet {
 		//Draw the image on screen
 		image(MusicPNG,0,0);
 		loadPixels();
-		println( red(pixels[0]));
-		println( green(pixels[0]));
-		println( blue(pixels[0]));
+		int p = 0;
+		while(p<8) {
+			println( (int)(red(pixels[p]) % 2 ) );
+			p = p + 1;
+		}
   }
   public void draw() {
     fill(255);
